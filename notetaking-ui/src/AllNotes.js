@@ -1,6 +1,17 @@
 import React from 'react';
+import { useQuery } from '@apollo/react-hooks';
+import gql from "graphql-tag";
 import { Link } from 'react-router-dom';
 
+const NOTES_QUERY = gql`
+{
+    allNotes {
+        title
+        content
+        _id
+        date
+    }
+}`
 const AllNotes = () => {
     let data = [1, 2, 3, 4, 5];
     return (
