@@ -20,7 +20,24 @@ const typeDefs = `
 
 
     type Query {
+        getNote(_id: ID!): Note
         allNotes: [Note]
+    }
+
+    input NoteInput {
+        title: String!
+        content: String!
+    }
+
+    input NoteUpdateInput {
+        title: String
+        content: String
+    }
+
+    type Mutation {
+        createNote(input: NoteInput) : Note
+        updateNote(_id: ID!, input: NoteUpdateInput): Note
+        deleteNote(_id: ID!) : Note
     }
 `;
 
