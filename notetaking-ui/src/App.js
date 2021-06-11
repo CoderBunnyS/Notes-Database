@@ -5,9 +5,9 @@ import {
   Link
 } from 'react-router-dom'
 import './App.css';
-import AllNotes from '../src/AllNotes'
-import NewNote from './src/NewNote'
-import EditNote from './src/EditNote'
+import AllNotes from './AllNotes'
+import NewNote from './NewNote'
+import EditNote from './EditNote'
 
 class App extends Component {
   render() {
